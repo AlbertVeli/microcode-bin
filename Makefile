@@ -15,8 +15,14 @@ microcode.h: microcode.dat
 	sed -n '/^\//!p' $< >> $@
 	echo "};" >> $@
 
+ucode.cpio: microcode.bin
+	mkdir -p initrd/kernel/x86/microcode/
+	cp microcode.bin initrd/kernel/x86/microcode/GenuineIntel.bin
+	cd initrd; find . | cpio -o -H newc > ../ucode.cpio
+	@echo "ucode.cpio created"
+
 .PHONY: clean
 
 clean:
-	rm -f microcode.bin microcode.h microcode $(OBJS)
+	rm -rf microcode.bin microcode.h microcode $(OBJS) initrd
 

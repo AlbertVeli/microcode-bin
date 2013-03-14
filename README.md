@@ -11,3 +11,13 @@ and run:
     make
 
 That should be enough to create microcode.bin. Requirements are sed, make and gcc.
+
+To create ucode.cpio for early microcode loading, run:
+
+    make ucode.cpio
+
+Additional requirement for this rule is the cpio command.
+
+For instructions on early microcode loading, see:
+
+http://albertveli.wordpress.com/2013/03/05/aes-ni-enabled/
