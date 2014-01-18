@@ -1,0 +1,7 @@
+microcode-*.tgz
+microcode.bin
+microcode.dat
+microcode.h
+microcode.o
+microcode
+ucode.cpio
