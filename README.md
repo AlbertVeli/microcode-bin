@@ -1,10 +1,10 @@
 Small utility to build binary microcode.bin from the Intel microcode.dat.
 
-Download microcode.dat from Intel. At the time of this writing the latest version is available for download here: https://downloadcenter.intel.com/Detail_Desc.aspx?DwnldID=23082
+Download microcode.dat from Intel. At the time of this writing the latest version is available for download here: https://downloadcenter.intel.com/Detail_Desc.aspx?DwnldID=23574
 
 Unpack it with:
 
-    tar zxvf microcode-20130808.tgz
+    tar zxvf microcode-20140122.tgz
 
 and run:
 
