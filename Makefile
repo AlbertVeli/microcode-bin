@@ -15,11 +15,12 @@ microcode.h: microcode.dat
 	sed -n '/^\//!p' $< >> $@
 	echo "};" >> $@
 
-ucode.cpio: microcode.bin
+img: microcode.bin
 	mkdir -p initrd/kernel/x86/microcode/
 	cp microcode.bin initrd/kernel/x86/microcode/GenuineIntel.bin
-	cd initrd; find . | cpio -o -H newc > ../ucode.cpio
-	@echo "ucode.cpio created"
+	cd initrd; find . | cpio -o -H newc > ../img
+	mv img initrd-`uname -r`.img
+	@echo "initrd-`uname -r`.img created"
 
 .PHONY: clean
 

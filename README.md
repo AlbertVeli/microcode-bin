@@ -12,9 +12,9 @@ and run:
 
 That should be enough to create microcode.bin. Requirements are sed, make and gcc.
 
-To create ucode.cpio for early microcode loading, run:
+To create an initrd image for early microcode loading, run:
 
-    make ucode.cpio
+    make initrd
 
 Additional requirement for this rule is the cpio command.
 
