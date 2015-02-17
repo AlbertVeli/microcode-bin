@@ -1,0 +1,11 @@
+--- /etc/grub.d/10_linux-org	2015-02-17 14:31:59.735101884 +0100
++++ /etc/grub.d/10_linux	2015-02-17 14:29:12.034275702 +0100
+@@ -297,7 +297,7 @@
+ 	   "initramfs-genkernel-${GENKERNEL_ARCH}-${version}" \
+ 	   "initramfs-genkernel-${GENKERNEL_ARCH}-${alt_version}"; do
+     if test -e "${dirname}/${i}" ; then
+-      initrd="$i"
++      initrd="intel-ucode.img /$i"
+       break
+     fi
+   done
